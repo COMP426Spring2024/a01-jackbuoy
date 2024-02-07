@@ -10,7 +10,9 @@ body {
     margin: 0;
     text-align: center;
     background-color: var(--palworld-white);
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .navbar {
@@ -18,10 +20,12 @@ body {
     background-color: var(--palworld-pink);
     bottom: 0;
     left: 0;
+    margin-top: auto;
     overflow: hidden;
     position: fixed;
     width: 100%;
     text-align: center;
+    z-index: 42;
 }
 
 .navbar a {
@@ -32,11 +36,13 @@ body {
     text-decoration: none;
     font-size: 18px;
     text-shadow: 0px 2px var(--palworld-brown);
+    z-index: 42;
 }
 
 .navbar a:hover {
     background-color: var(--palworld-brown);
     color: var(--palworld-white);
+    z-index: 42;
 }
 
 .navbar a.active {
@@ -44,6 +50,7 @@ body {
     color: var(--palworld-pink);
     font-weight: bold;
     text-shadow: 0px 2px 1px rgba(0,0,0,.2);
+    z-index: 42;
 }
 
 .header {
@@ -58,8 +65,10 @@ body {
     text-align: center;
     padding: 10px 12px;
     border-radius: 10px;
+    margin-bottom: auto;
     text-shadow: 0px 2px var(--palworld-brown);
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,.4);
+    z-index: 21;
 }
 
 .content-box {
@@ -86,6 +95,7 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .content-box-text h4 {
@@ -109,7 +119,7 @@ body {
     border-radius: 0 10px 10px 0;
 }
 
-.content-scroll-box {
+.content-box-timeline {
     background-color: var(--palworld-green);
     color: var(--palworld-white);
     width: 70%;
@@ -118,4 +128,63 @@ body {
     border-radius: 10px;
     flex-direction: row;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,.4);
+    overflow: auto;
+}
+
+.content-box-text ul {
+    list-style-type: none;
+    padding-bottom: 25%;
+}
+
+.content-box-text li {
+    margin-bottom: 10px;
+    text-shadow: 0px 2px 1px rgba(0,0,0,.2);
+}
+
+.content-box-text h5 {
+    text-shadow: 0px 2px 1px rgba(0,0,0,.2);
+}
+
+.content-box-image {
+    width: 50%;
+    margin: auto;
+}
+
+#bottom-list {
+    padding-bottom: 0px;
+}
+
+.image-section {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius:  10px 10px 0;
+    margin: 0;
+    padding: 0%;
+}
+
+#table-text {
+    text-shadow: 0px 2px 1px rgba(0,0,0,.2);
+    border-spacing: 10px;
+    width: 100%;
+}
+
+#table-text th, #table-text td {
+    padding: 15px;
+}
+
+.content-box-table {
+    overflow: auto;
+    background-color: var(--palworld-green);
+    color: var(--palworld-white);
+    width: 70%;
+    height: 70%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: row;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,.4);
+}
+
+.select-box {
+    width: 25%;
 }
